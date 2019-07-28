@@ -1,0 +1,477 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 306px) {
+  .container {
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 346px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 435px) {
+  .container {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 486px) {
+  .container {
+    max-width: 440px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 530px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1650px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  background: url("../img/background.jpg") no-repeat center/cover;
+}
+
+.header .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem 0;
+}
+
+.header .top .menu--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .top .menu--wrapper .menu {
+  margin-right: 2rem;
+}
+
+.header .top .menu--wrapper .menu-item {
+  margin: 0 0.5em;
+  border-left: 2px solid transparent;
+}
+
+.header .top .menu--wrapper .menu-item_active {
+  border-left: 2px solid #129968;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .top .menu--wrapper .menu-item_active::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 16%;
+  top: 0;
+  left: 0;
+  background: #129968;
+}
+
+.header .top .menu--wrapper .menu-item_active::before {
+  content: '';
+  position: absolute;
+  height: 40%;
+  width: 2px;
+  bottom: 0;
+  right: 0;
+  background: #129968;
+}
+
+.header .top .menu--wrapper .menu-item_active .menu--links_link::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header .top .menu--wrapper .menu-item_active .menu--links_link::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header .top .menu--wrapper .menu--links {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .top .menu--wrapper .menu--links_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.4rem;
+  color: #ffffff;
+  padding: 1.285714em 2.428571em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: url("../img/menu_bg.svg");
+  background-size: cover;
+  position: relative;
+  font-weight: 600;
+}
+
+.header .top .menu--wrapper .menu--links_link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header .top .menu--wrapper .menu--links_link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header .top .menu--wrapper .menu--links_link:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.header .top .menu--wrapper .menu--links_link::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #129968;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .top .menu--wrapper .menu--links_link::before {
+  content: '';
+  width: 30px;
+  height: 12px;
+  background: #129968;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.header .top .menu--wrapper .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .top .menu--wrapper .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-decoration: none;
+}
+
+.header .top .menu--wrapper .phone_text {
+  font-family: "Museo Sans Cyrl 700";
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.header .top .menu--wrapper .phone_icon {
+  margin-right: 1rem;
+}
+
+.header .top .menu--wrapper .phone_title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.header .main {
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.header .main .down {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header .main .down_rhombus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #215db7;
+}
+
+.header .main .down_rhombus svg {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .main .down_text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Museo Sans Cyrl 100";
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin: 0 1rem;
+  height: 17rem;
+}
+
+.header .main .down-line-first {
+  display: block;
+  height: 26rem;
+  width: 1px;
+  background: #c1c4c5;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.header .main .down-line-sec {
+  display: block;
+  height: 5rem;
+  width: 1px;
+  background: #c1c4c5;
+  margin: 1rem 0 3rem 0;
+  border: none;
+}
+
+.header .main .down-line-third {
+  display: block;
+  height: 12rem;
+  width: 1px;
+  background: #c1c4c5;
+  margin-top: 3rem;
+  border: none;
+}
+
+.header .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .main--wrapper {
+  padding: 20rem 0 0 14rem;
+}
+
+.header .main_title {
+  font-family: "Museo Sans Cyrl 900";
+  color: #fff;
+  font-size: 6.2rem;
+  min-width: 80rem;
+  line-height: 1.5em;
+}
+
+.header .main_title span {
+  font-size: 7.2rem;
+}
+
+.header .main_btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 1.8em 7em;
+  background: #129968;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.header .main_btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 5rem;
+  height: 1.7rem;
+  background: #215db7;
+}
+
+.header .main_btn_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header .main_subtitle {
+  font-size: 2.7rem;
+  font-family: "Museo Sans Cyrl 700";
+  color: #fff;
+  line-height: 1.5em;
+  margin-bottom: 4.5rem;
+}
+
+.header .main_header {
+  font-size: 12rem;
+  font-family: "Gilroy";
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 8.4rem;
+  margin-top: 20rem;
+}
+
+.header .main_header span {
+  color: #215db7;
+}
+/*# sourceMappingURL=style.css.map */
